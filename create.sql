@@ -21,7 +21,7 @@ CREATE TABLE tb_filme(
     codigo_filme INT NOT NULL,
     nome_filme VARCHAR(50) NOT NULL,
     ano_lancamento_filme INT NOT NULL,
-    categoria_filme VARCHAR(20) NOT NULL,
+    categoria_filme VARCHAR(20),
     codigo_diretor INT,
     CONSTRAINT pk_tb_filme PRIMARY KEY (codigo_filme),
     CONSTRAINT fk_tb_filme_tb_diretor FOREIGN KEY (codigo_diretor)

@@ -1,3 +1,6 @@
+--
+-- INSERTS DA TB_DIRETOR
+--
 INSERT INTO tb_diretor (codigo_diretor, nome_diretor)
 VALUES
     (1, "Pedro Paulo Matos"),
@@ -6,6 +9,8 @@ VALUES
     (4, "Tim Burton"),
     (5, "Rob Zombie"),
     (6, "Quentin Tarantino");
+--
+-- INSERTS DA TB_SALA
 --
 INSERT INTO tb_sala (numero_sala, descricao_sala, capacidade_sala)
 VALUES

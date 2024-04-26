@@ -16,7 +16,7 @@ VALUES
     (5, "Harmoniosa", 420),
     (6, "Atemporal", 460),
     (7, "Deslumbrante", 393),
-    (8, "Atemporal", 380),
+    (8, "Atemporal", 150),
     (9, "Confortável", 105),
     (10, "Encantadora", 267),
     (11, "Tecnológica", 393),

@@ -21,7 +21,7 @@ CREATE TABLE tb_filme(
     codigo_filme INT NOT NULL,
     nome_filme VARCHAR(50) NOT NULL,
     ano_lancamento_filme INT NOT NULL,
-    categoria_filme VARCHAR(20) NOT NULL,
+    categoria_filme VARCHAR(20),
     codigo_diretor INT,
     CONSTRAINT pk_tb_filme PRIMARY KEY (codigo_filme),
     CONSTRAINT fk_tb_filme_tb_diretor FOREIGN KEY (codigo_diretor)
@@ -29,4 +29,30 @@ CREATE TABLE tb_filme(
     ON DELETE CASCADE ON UPDATE CASCADE
 )ENGINE=INNODB;
 DESC tb_filme;
+--
+CREATE TABLE tb_premio(
+    codigo_premio INT NOT NULL,
+    nome_premio VARCHAR(20) NOT NULL,
+    ano_premiacao_premio INT NOT NULL,
+    codigo_filme INT,
+    CONSTRAINT pk_tb_premio PRIMARY KEY (codigo_premio),
+    CONSTRAINT fk_tb_premio_tb_filme FOREIGN KEY (codigo_filme)
+        REFERENCES tb_filme(codigo_filme)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=INNODB;
+DESC tb_premio;
+--
+CREATE TABLE tb_sala_filme(
+    numero_sala INT NOT NULL,
+    codigo_filme INT NOT NULL,
+    data_sala_filme DATE NOT NULL,
+    horario_sala_filme TIME NOT NULL,
+    CONSTRAINT pk_tb_sala_filme PRIMARY KEY (numero_sala, codigo_filme, data_sala_filme, horario_sala_filme),
+    CONSTRAINT fk_tb_sala_filme_tb_sala FOREIGN KEY (numero_sala)
+        REFERENCES tb_sala(numero_sala),
+    CONSTRAINT fk_tb_sala_filme_tb_filme FOREIGN KEY (codigo_filme)
+        REFERENCES tb_filme(codigo_filme)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=INNODB;
+DESC tb_sala_filme;
 --

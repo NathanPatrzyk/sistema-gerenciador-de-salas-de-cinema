@@ -30,3 +30,14 @@ CREATE TABLE tb_filme(
 )ENGINE=INNODB;
 DESC tb_filme;
 --
+CREATE TABLE tb_premio(
+    codigo_premio INT NOT NULL,
+    nome_premio VARCHAR(20) NOT NULL,
+    ano_premiacao_premio INT NOT NULL,
+    codigo_filme INT,
+    CONSTRAINT pk_tb_premio PRIMARY KEY (codigo_premio),
+    CONSTRAINT fk_tb_premio_tb_filme FOREIGN KEY (codigo_filme)
+        REFERENCES tb_filme(codigo_filme)
+    ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=INNODB;
+DESC tb_premio;

@@ -1,7 +1,74 @@
+--
+-- Considere uma sistema gerenciador de salas de cinema. Crie as tabelas do modelo relacional deste sistema.
+-- tbSala(numero_sala: inteiro, descricao_sala: caracter(20), capacidade:inteiro)
+-- tbSalaFilme(numero_sala: inteiro, codigo_filme: inteiro, data: data, horario: tempo)
+-- numero_sala referencia tbSala
+-- codigo_filme referencia tbFilme
+-- tbFilme(codigo_flme: inteiro, nome_filme: caracter(50),ano_lancamento: inteiro, categoria_filme: caracter(20),codigo_diretor: inteiro)
+-- codigo_diretor referencia tbDiretor
+-- tbDiretor(codigo_diretor: inteiro, nome_diretor: caracter(20))
+-- tbPremio(codigo_premio: inteiro, nome_premio:caracter(20),ano_premiacao:inteiro, codigo_filme:inteiro)
+-- codigo_filme referencia tbFilme
+--
+DROP DATABASE IF EXISTS db_cinema;
+CREATE DATABASE db_cinema;
+USE db_cinema;
+--
+CREATE TABLE tb_sala(
+    numero_sala INT NOT NULL,
+    descricao_sala VARCHAR(20) NOT NULL,
+    capacidade_sala INT NOT NULL,
+    CONSTRAINT pk_tb_sala PRIMARY KEY (numero_sala)
+) ENGINE = INNODB;
+DESC tb_sala;
+--
+CREATE TABLE tb_diretor(
+    codigo_diretor INT NOT NULL,
+    nome_diretor VARCHAR(20) NOT NULL,
+    CONSTRAINT pk_tb_diretor PRIMARY KEY (codigo_diretor)
+) ENGINE = INNODB;
+DESC tb_diretor;
+--
+CREATE TABLE tb_filme(
+    codigo_filme INT NOT NULL,
+    nome_filme VARCHAR(50) NOT NULL,
+    ano_lancamento_filme INT NOT NULL,
+    categoria_filme VARCHAR(20),
+    codigo_diretor INT,
+    CONSTRAINT pk_tb_filme PRIMARY KEY (codigo_filme),
+    CONSTRAINT fk_tb_filme_tb_diretor FOREIGN KEY (codigo_diretor) REFERENCES tb_diretor(codigo_diretor) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = INNODB;
+DESC tb_filme;
+--
+CREATE TABLE tb_premio(
+    codigo_premio INT NOT NULL,
+    nome_premio VARCHAR(20) NOT NULL,
+    ano_premiacao_premio INT NOT NULL,
+    codigo_filme INT,
+    CONSTRAINT pk_tb_premio PRIMARY KEY (codigo_premio),
+    CONSTRAINT fk_tb_premio_tb_filme FOREIGN KEY (codigo_filme) REFERENCES tb_filme(codigo_filme) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = INNODB;
+DESC tb_premio;
+--
+CREATE TABLE tb_sala_filme(
+    numero_sala INT NOT NULL,
+    codigo_filme INT NOT NULL,
+    data_sala_filme DATE NOT NULL,
+    horario_sala_filme TIME NOT NULL,
+    CONSTRAINT pk_tb_sala_filme PRIMARY KEY (
+        numero_sala,
+        codigo_filme,
+        data_sala_filme,
+        horario_sala_filme
+    ),
+    CONSTRAINT fk_tb_sala_filme_tb_sala FOREIGN KEY (numero_sala) REFERENCES tb_sala(numero_sala),
+    CONSTRAINT fk_tb_sala_filme_tb_filme FOREIGN KEY (codigo_filme) REFERENCES tb_filme(codigo_filme) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = INNODB;
+DESC tb_sala_filme;
+--
 -- Usando o Gerador de dados automático faça a geração de 100 registros por tabela exceto para as tabelas: tabela diretor que deve conter os seguintes registros (Pedro Paulo Matos, Jorge da Penha, Severino Juca, Tim Burton, Rob Zombie, Quentin Tarantino). Não esqueça de observar as relações existentes para que haja consistência na inserção de dados.
 --
--- INSERTS DA TB_DIRETOR
---
+-- Inserts da tb_diretor
 INSERT INTO tb_diretor (codigo_diretor, nome_diretor)
 VALUES (1, "Pedro Paulo Matos"),
     (2, "Jorge da Penha"),
@@ -9,9 +76,7 @@ VALUES (1, "Pedro Paulo Matos"),
     (4, "Tim Burton"),
     (5, "Rob Zombie"),
     (6, "Quentin Tarantino");
---
--- INSERTS DA TB_SALA
---
+-- Inserts da tb_sala
 INSERT INTO tb_sala (numero_sala, descricao_sala, capacidade_sala)
 VALUES (1, "Inspiradora", 356),
     (2, "Minimalista", 314),
@@ -114,9 +179,7 @@ VALUES (51, "Íntima", 101),
     (98, "Clássica", 90),
     (99, "Inovadora", 123),
     (100, "Radiante", 219);
---
--- INSERTS DA TB_FILME
---
+-- Inserts da tb_filme
 INSERT INTO tb_filme (
         codigo_filme,
         nome_filme,
@@ -229,9 +292,7 @@ VALUES (51, "Sonic", 1960, 4),
     (98, "Star", 1983, 2),
     (99, "Up", 2010, 2),
     (100, "Êxtase", 1977, 5);
---
--- INSERTS DA TB_PREMIO
---
+-- Inserts da tb_premio
 INSERT INTO tb_premio (
         codigo_premio,
         nome_premio,
@@ -344,9 +405,7 @@ VALUES (51, "SAG", 2010, 63),
     (98, "BAFTA", 2021, 22),
     (99, "Spirit", 2004, 70),
     (100, "Berlim", 2022, 23);
---
--- INSERTS DA TB_SALA_FILME
---
+-- Inserts da tb_sala_filme
 INSERT INTO tb_sala_filme (numero_sala,codigo_filme,data_sala_filme,horario_sala_filme)
 VALUES
   (63,71,"2010-03-09","19:51:32"),
@@ -451,3 +510,49 @@ VALUES
   (88,25,"2015-12-23","11:14:57"),
   (52,56,"2019-04-20","12:05:15"),
   (38,24,"2022-08-18","15:03:59");
+--
+-- No momento da inserção de dados da tbFilme deixe a categoria_filme em branco. Depois que todas as tabelas foram preenchidas utilizando o comando UPDATE atualize a categoria de filmes de 20 em 20 com as seguintes categorias “Terror”, “Comédia”, “Ação”, ”Suspense”, “Romance”.
+--
+SELECT * FROM tb_filme
+WHERE codigo_filme <= 20;
+--
+UPDATE tb_filme
+SET categoria_filme = "Terror"
+WHERE codigo_filme <= 20;
+--
+SELECT * FROM tb_filme
+WHERE codigo_filme > 20
+AND codigo_filme <= 40;
+--
+UPDATE tb_filme
+SET categoria_filme = "Comédia"
+WHERE codigo_filme > 20
+AND codigo_filme <= 40;
+--
+SELECT * FROM tb_filme
+WHERE codigo_filme > 40
+AND codigo_filme <= 60;
+--
+UPDATE tb_filme
+SET categoria_filme = "Ação"
+WHERE codigo_filme > 40
+AND codigo_filme <= 60;
+--
+SELECT * FROM tb_filme
+WHERE codigo_filme > 60
+AND codigo_filme <= 80;
+--
+UPDATE tb_filme
+SET categoria_filme = "Suspense"
+WHERE codigo_filme > 60
+AND codigo_filme <= 80;
+--
+SELECT * FROM tb_filme
+WHERE codigo_filme > 80
+AND codigo_filme <= 100;
+--
+UPDATE tb_filme
+SET categoria_filme = "Romance"
+WHERE codigo_filme > 80
+AND codigo_filme <= 100;
+--

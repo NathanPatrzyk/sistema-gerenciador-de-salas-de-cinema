@@ -300,7 +300,7 @@ INSERT INTO tb_premio (
         codigo_filme
     )
 VALUES (1, "Goya", 2010, 23),
-    (2, "Lumières", 2021, 64),
+    (2, "Lumières", 2021, 25),
     (3, "SAG", 2017, 17),
     (4, "Veneza", 2010, 28),
     (5, "MTV", 2023, 76),
@@ -308,8 +308,8 @@ VALUES (1, "Goya", 2010, 23),
     (7, "Goya", 2003, 2),
     (8, "BAFTA", 2010, 70),
     (9, "Berlim", 2015, 68),
-    (10, "Critics", 2016, 71),
-    (11, "BAFTA", 2020, 28),
+    (10, "Critics", 2016, 25),
+    (11, "BAFTA", 2020, 25),
     (12, "Oscar", 2017, 50),
     (13, "Spirit", 2002, 79),
     (14, "Annie", 2016, 94),
@@ -325,9 +325,9 @@ VALUES (1, "Goya", 2010, 23),
     (24, "SAG", 2014, 32),
     (25, "Urso", 2022, 96),
     (26, "Lumières", 2016, 44),
-    (27, "Lumières", 2004, 58),
+    (27, "Lumières", 2004, 25),
     (28, "Spirit", 2011, 79),
-    (29, "Oscar", 2014, 35),
+    (29, "Oscar", 2014, 25),
     (30, "Veneza", 2009, 53),
     (31, "Sundance", 2016, 70),
     (32, "Annie", 2022, 60),
@@ -343,9 +343,9 @@ VALUES (1, "Goya", 2010, 23),
     (42, "Veneza", 2007, 90),
     (43, "Gotham", 2010, 78),
     (44, "Veneza", 2017, 65),
-    (45, "César", 2018, 60),
-    (46, "Critics", 2003, 61),
-    (47, "Critics", 2007, 13),
+    (45, "César", 2018, 25),
+    (46, "Critics", 2003, 25),
+    (47, "Critics", 2007, 25),
     (48, "Lumières", 2014, 77),
     (49, "Berlim", 2013, 43),
     (50, "Globo", 2004, 2);
@@ -357,7 +357,7 @@ INSERT INTO tb_premio (
     )
 VALUES (51, "SAG", 2010, 63),
     (52, "Oscar", 2014, 33),
-    (53, "MTV", 2016, 16),
+    (53, "MTV", 2016, 25),
     (54, "Spirit", 2013, 68),
     (55, "Goya", 2002, 1),
     (56, "Sundance", 2014, 27),
@@ -379,7 +379,7 @@ VALUES (51, "SAG", 2010, 63),
     (72, "MTV", 2013, 82),
     (73, "BAFTA", 2018, 1),
     (74, "Palma", 2021, 100),
-    (75, "Palma", 2009, 10),
+    (75, "Palma", 2009, 25),
     (76, "Berlim", 2014, 67),
     (77, "César", 2018, 80),
     (78, "Palma", 2020, 2),
@@ -388,7 +388,7 @@ VALUES (51, "SAG", 2010, 63),
     (81, "Globo", 2018, 52),
     (82, "César", 2005, 16),
     (83, "Globo", 2014, 44),
-    (84, "Satellite", 2018, 8),
+    (84, "Satellite", 2018, 25),
     (85, "SAG", 2013, 26),
     (86, "Gotham", 2007, 18),
     (87, "Cannes", 2015, 12),
@@ -402,50 +402,50 @@ VALUES (51, "SAG", 2010, 63),
     (95, "Goya", 2023, 98),
     (96, "Palma", 2021, 35),
     (97, "Veneza", 2021, 62),
-    (98, "BAFTA", 2021, 22),
-    (99, "Spirit", 2004, 70),
+    (98, "BAFTA", 2021, 25),
+    (99, "Spirit", 2004, 25),
     (100, "Berlim", 2022, 23);
 -- Inserts da tb_sala_filme
 INSERT INTO tb_sala_filme (numero_sala,codigo_filme,data_sala_filme,horario_sala_filme)
 VALUES
-  (63,71,"2010-03-09","19:51:32"),
+  (12,71,"2019-11-15","19:51:32"),
   (15,41,"2021-01-14","17:31:00"),
   (12,50,"2013-07-30","15:37:27"),
   (87,45,"2019-04-20","17:45:29"),
   (89,5,"2021-02-18","19:31:42"),
   (79,33,"2016-02-01","7:35:36"),
-  (98,7,"2019-04-20","21:34:49"),
+  (98,7,"2019-05-20","21:34:49"),
   (18,83,"2004-04-08","21:17:47"),
   (77,80,"2010-09-23","8:48:21"),
   (42,68,"2009-04-13","7:23:34"),
   (68,46,"2012-02-04","10:05:06"),
-  (89,24,"2019-11-15","11:34:28"),
+  (89,24,"2010-09-23","11:34:28"),
   (9,86,"2014-09-12","14:41:56"),
   (27,76,"2020-01-03","9:09:55"),
   (37,4,"2003-08-01","14:03:06"),
-  (22,91,"2003-04-01","7:40:39"),
-  (75,53,"2014-06-13","15:35:37"),
+  (22,91,"2010-06-01","7:40:39"),
+  (12,53,"2019-11-15","15:35:37"),
   (91,63,"2012-09-03","19:27:05"),
-  (8,44,"2002-04-13","17:39:08"),
+  (8,44,"2010-06-13","17:39:08"),
   (21,8,"2005-11-02","14:41:50"),
   (35,34,"2010-06-19","21:35:35"),
-  (31,100,"2012-12-08","15:00:25"),
+  (31,100,"2019-05-08","15:00:25"),
   (72,89,"2019-11-15","19:17:30"),
-  (97,98,"2024-03-01","17:37:59"),
+  (97,98,"2019-05-23","17:37:59"),
   (16,5,"2019-04-20","14:06:15"),
-  (69,15,"2003-11-29","13:07:01"),
+  (12,15,"2019-11-15","13:07:01"),
   (92,54,"2019-04-20","7:20:33"),
-  (47,88,"2019-04-20","18:54:30"),
+  (12,88,"2019-04-20","18:54:30"),
   (63,68,"2010-12-05","17:46:36"),
-  (36,97,"2019-11-15","8:37:20"),
+  (36,97,"2010-09-23","8:37:20"),
   (63,46,"2009-09-11","10:43:26"),
   (49,60,"2010-11-06","21:56:14"),
-  (68,63,"2004-12-20","10:03:04"),
-  (76,34,"2006-08-24","9:23:00"),
+  (12,63,"2019-05-20","10:03:04"),
+  (12,34,"2006-08-24","9:23:00"),
   (97,9,"2019-11-15","14:54:58"),
-  (75,89,"2019-11-15","19:59:51"),
-  (97,88,"2002-08-20","13:28:24"),
-  (50,36,"2001-02-19","11:22:49"),
+  (75,89,"2010-09-23","19:59:51"),
+  (12,88,"2019-11-15","13:28:24"),
+  (50,36,"2010-06-19","11:22:49"),
   (44,22,"2023-10-02","17:30:41"),
   (81,56,"2001-01-07","22:10:28"),
   (58,3,"2004-04-26","8:05:25"),
@@ -457,26 +457,26 @@ VALUES
   (40,55,"2003-06-20","19:14:33"),
   (10,32,"2015-08-25","20:43:23"),
   (9,10,"2010-03-19","13:03:04"),
-  (69,59,"2019-11-15","16:52:06");
+  (69,59,"2019-05-23","16:52:06");
 INSERT INTO tb_sala_filme (numero_sala,codigo_filme,data_sala_filme,horario_sala_filme)
 VALUES
   (44,94,"2015-12-02","18:55:22"),
   (61,29,"2019-04-20","10:11:16"),
-  (83,37,"2002-09-13","19:15:07"),
+  (83,37,"2010-06-13","19:15:07"),
   (86,67,"2014-04-20","8:27:00"),
   (1,93,"2019-04-20","19:57:49"),
   (58,48,"2001-02-11","21:22:54"),
   (13,97,"2007-03-27","16:24:47"),
   (50,95,"2002-08-17","10:08:46"),
   (59,90,"2017-12-30","10:32:14"),
-  (27,41,"2018-11-02","9:29:21"),
+  (12,41,"2019-05-02","9:29:21"),
   (32,58,"2002-12-31","20:13:40"),
-  (1,21,"2001-11-29","19:41:07"),
+  (1,21,"2019-05-29","19:41:07"),
   (57,26,"2019-03-22","10:30:33"),
-  (20,61,"2014-07-16","11:58:44"),
+  (12,61,"2019-11-15","11:58:44"),
   (100,80,"2004-03-14","19:06:31"),
   (20,73,"2020-03-15","13:27:48"),
-  (95,78,"2019-11-15","10:43:20"),
+  (95,78,"2010-09-23","10:43:20"),
   (38,56,"2019-04-20","9:48:39"),
   (13,47,"2019-04-20","20:28:13"),
   (51,65,"2000-06-11","7:14:08"),
@@ -488,71 +488,201 @@ VALUES
   (49,40,"2012-02-28","12:27:55"),
   (60,66,"2001-05-01","10:53:59"),
   (87,73,"2009-11-06","18:22:48"),
-  (96,96,"2005-08-01","20:17:26"),
-  (94,27,"2019-11-15","22:41:42"),
-  (99,11,"2019-11-15","21:41:25"),
+  (96,96,"2010-06-01","20:17:26"),
+  (94,27,"2010-09-23","22:41:42"),
+  (12,11,"2019-11-15","21:41:25"),
   (28,41,"2020-01-18","18:10:55"),
   (9,14,"2010-03-15","20:04:47"),
-  (60,35,"2004-12-14","12:26:30"),
+  (60,35,"2019-05-10","12:26:30"),
   (53,18,"2011-01-01","12:55:40"),
   (80,81,"2021-11-12","16:34:39"),
   (95,66,"2022-01-03","9:46:07"),
-  (31,32,"2019-11-15","17:07:41"),
+  (31,32,"2010-09-23","17:07:41"),
   (46,8,"2009-11-18","7:37:55"),
-  (88,30,"2000-12-29","16:31:47"),
+  (88,30,"2010-06-29","16:31:47"),
   (83,2,"2006-10-22","20:06:26"),
   (45,96,"2019-09-27","8:24:32"),
   (43,96,"2012-09-12","17:11:44"),
-  (54,29,"2014-05-11","11:33:14"),
-  (16,83,"2014-05-10","17:42:17"),
-  (91,24,"2019-04-20","16:34:50"),
-  (67,11,"2016-07-13","16:10:29"),
+  (12,29,"2014-05-11","11:33:14"),
+  (16,83,"2019-05-10","17:42:17"),
+  (12,24,"2019-11-15","16:34:50"),
+  (12,11,"2019-11-15","16:10:29"),
   (88,25,"2015-12-23","11:14:57"),
   (52,56,"2019-04-20","12:05:15"),
-  (38,24,"2022-08-18","15:03:59");
+  (12,24,"2022-08-18","15:03:59");
 --
 -- No momento da inserção de dados da tbFilme deixe a categoria_filme em branco. Depois que todas as tabelas foram preenchidas utilizando o comando UPDATE atualize a categoria de filmes de 20 em 20 com as seguintes categorias “Terror”, “Comédia”, “Ação”, ”Suspense”, “Romance”.
 --
-SELECT * FROM tb_filme
-WHERE codigo_filme <= 20;
+UPDATE tb_filme
+SET tb_filme.categoria_filme = "Terror"
+WHERE tb_filme.codigo_filme <= 20;
 --
 UPDATE tb_filme
-SET categoria_filme = "Terror"
-WHERE codigo_filme <= 20;
---
-SELECT * FROM tb_filme
-WHERE codigo_filme > 20
-AND codigo_filme <= 40;
+SET tb_filme.categoria_filme = "Comédia"
+WHERE tb_filme.codigo_filme > 20
+AND tb_filme.codigo_filme <= 40;
 --
 UPDATE tb_filme
-SET categoria_filme = "Comédia"
-WHERE codigo_filme > 20
-AND codigo_filme <= 40;
---
-SELECT * FROM tb_filme
-WHERE codigo_filme > 40
-AND codigo_filme <= 60;
+SET tb_filme.categoria_filme = "Ação"
+WHERE tb_filme.codigo_filme > 40
+AND tb_filme.codigo_filme <= 60;
 --
 UPDATE tb_filme
-SET categoria_filme = "Ação"
-WHERE codigo_filme > 40
-AND codigo_filme <= 60;
---
-SELECT * FROM tb_filme
-WHERE codigo_filme > 60
-AND codigo_filme <= 80;
+SET tb_filme.categoria_filme = "Suspense"
+WHERE tb_filme.codigo_filme > 60
+AND tb_filme.codigo_filme <= 80;
 --
 UPDATE tb_filme
-SET categoria_filme = "Suspense"
-WHERE codigo_filme > 60
-AND codigo_filme <= 80;
+SET tb_filme.categoria_filme = "Romance"
+WHERE tb_filme.codigo_filme > 80
+AND tb_filme.codigo_filme <= 100;
 --
-SELECT * FROM tb_filme
-WHERE codigo_filme > 80
-AND codigo_filme <= 100;
+-- Depois de criada a tabela Filme percebeu-se que foi esquecido de criar o atributo Produtora, altere a tabela inserindo este atributo.
+--
+ALTER TABLE tb_filme
+ADD COLUMN produtora_filme VARCHAR(20);
+--
+-- A cada 20 filmes insira o nome das seguintes produtoras: Warner, Universal, Fox, NetFlix, Sony
 --
 UPDATE tb_filme
-SET categoria_filme = "Romance"
-WHERE codigo_filme > 80
-AND codigo_filme <= 100;
+SET tb_filme.produtora_filme = "Warner"
+WHERE tb_filme.codigo_filme <= 20;
 --
+UPDATE tb_filme
+SET tb_filme.produtora_filme = "Universal"
+WHERE tb_filme.codigo_filme > 20
+AND tb_filme.codigo_filme <= 40;
+--
+UPDATE tb_filme
+SET tb_filme.produtora_filme = "Fox"
+WHERE tb_filme.codigo_filme > 40
+AND tb_filme.codigo_filme <= 60;
+--
+UPDATE tb_filme
+SET tb_filme.produtora_filme = "NetFlix"
+WHERE tb_filme.codigo_filme > 60
+AND tb_filme.codigo_filme <= 80;
+--
+UPDATE tb_filme
+SET tb_filme.produtora_filme = "Sony"
+WHERE tb_filme.codigo_filme > 80
+AND tb_filme.codigo_filme <= 100;
+--
+--  Faça uma consulta que retorne o nome de todos os diretores cadastrados na base de dados.
+--
+SELECT tb_diretor.nome_diretor
+FROM tb_diretor;
+--
+-- Faça uma consulta que retorne o nome de todos os filmes da categoria “terror”.
+--
+SELECT tb_filme.nome_filme, tb_filme.categoria_filme
+FROM tb_filme
+WHERE tb_filme.categoria_filme = "Terror";
+--
+-- Faça uma consulta que retorne o nome de todos os filmes da categoria “terror” do diretor Rob Zombie.
+--
+SELECT tb_filme.nome_filme, tb_filme.categoria_filme, tb_diretor.nome_diretor
+FROM tb_filme, tb_diretor
+WHERE tb_filme.categoria_filme = "Terror"
+AND tb_diretor.nome_diretor = "Rob Zombie"
+AND tb_filme.codigo_diretor = tb_diretor.codigo_diretor;
+--
+-- Atualize a base de dados de forma que a capacidade da sala de número 8 passe de 150 lugares para 200 lugares. 
+--
+UPDATE tb_sala
+SET tb_sala.capacidade_sala = 200
+WHERE numero_sala=8;
+--
+-- Atualize a base de dados para que todos os filmes que seriam exibidos na sala 12 no dia 15/11/2019 sejam transferidos para a sala 8.
+--
+UPDATE tb_sala_filme
+SET tb_sala_filme.numero_sala = 8
+WHERE numero_sala=12 AND data_sala_filme="2019-11-15";
+--
+-- Exclua o diretor de nome “Quentin Tarantino”. Como fica a questão de integridade referencial?
+--
+DELETE FROM tb_diretor WHERE nome_diretor = "Quentin Tarantino";
+-- Ao excluir o diretor, todos os filmes com esse diretor são apagados da base de dados, pois utilizando o ON DELETE CASCADE os dados são apagados na forma de cascata.
+--
+-- Encontre o nome de todos os filmes dirigidos pelo diretor “Jorge da Penha”.
+--
+SELECT tb_filme.nome_filme, tb_diretor.nome_diretor
+FROM tb_filme, tb_diretor
+WHERE tb_diretor.nome_diretor = "Jorge da Penha"
+AND tb_filme.codigo_diretor = tb_diretor.codigo_diretor;
+--
+-- Faça uma consulta que retorne o nome de todos os filmes e horários de exibição para o dia 20/04/2019.
+--
+SELECT tb_filme.nome_filme, tb_sala_filme.horario_sala_filme, tb_sala_filme.data_sala_filme
+FROM tb_filme, tb_sala_filme
+WHERE tb_sala_filme.data_sala_filme = "2019-04-20"
+AND tb_sala_filme.codigo_filme = tb_filme.codigo_filme
+ORDER BY horario_sala_filme;
+--
+-- Faça uma consulta que retorne todos os prêmios que o filme “Titanic” ganhou.
+--
+SELECT tb_premio.nome_premio, tb_premio.ano_premiacao_premio, tb_filme.nome_filme
+FROM tb_premio, tb_filme
+WHERE tb_filme.nome_filme = "Titanic"
+AND tb_premio.codigo_filme = tb_filme.codigo_filme;
+--
+-- Faça uma consulta que retorne o nome de todos os filmes que estão sendo exibidos em salas com capacidade maior que 200 lugares. 
+--
+SELECT tb_filme.nome_filme FROM tb_filme, tb_sala_filme, tb_sala
+WHERE tb_sala.capacidade_sala > 200
+AND tb_sala_filme.numero_sala = tb_sala.numero_sala
+AND tb_sala_filme.codigo_filme = tb_filme.codigo_filme;
+--
+-- Faça uma lista com o nome de todos os filmes, número da sala e horários de exibição para o mês de maio de 2019.
+--
+SELECT tb_filme.nome_filme, tb_sala_filme.numero_sala, tb_sala_filme.horario_sala_filme, tb_sala_filme.data_sala_filme
+FROM tb_filme, tb_sala_filme
+WHERE tb_sala_filme.data_sala_filme LIKE "2019-05%"
+AND tb_sala_filme.codigo_filme = tb_filme.codigo_filme
+ORDER BY tb_sala_filme.data_sala_filme, tb_sala_filme.horario_sala_filme;
+--
+--  Faça uma lista com o nome de todos os filmes que receberam o prêmio nos anos de 2015, 2016, 2017 e 2018.
+--
+SELECT tb_filme.nome_filme, tb_premio.nome_premio, tb_premio.ano_premiacao_premio
+FROM tb_premio, tb_filme
+WHERE tb_premio.ano_premiacao_premio >= 2015
+AND tb_premio.ano_premiacao_premio <= 2018
+AND tb_premio.codigo_filme = tb_filme.codigo_filme
+ORDER BY tb_premio.ano_premiacao_premio;
+--
+-- Faça uma consulta que retorne o nome de todos os filmes da categoria “comédia” que serão exibidos no mês de junho de 2010.
+--
+SELECT tb_filme.nome_filme, tb_sala_filme.numero_sala, tb_sala_filme.horario_sala_filme, tb_sala_filme.data_sala_filme
+FROM tb_filme, tb_sala_filme
+WHERE tb_sala_filme.data_sala_filme LIKE "2010-06%"
+AND tb_sala_filme.codigo_filme = tb_filme.codigo_filme
+ORDER BY tb_sala_filme.data_sala_filme, tb_sala_filme.horario_sala_filme;
+--
+-- Faça uma consulta que retorne a descrição da sala, a categoria e o nome dos filmes que foram dirigidos pelo diretor “Severino Juca”.
+--
+SELECT tb_sala.descricao_sala, tb_filme.categoria_filme, tb_filme.nome_filme, tb_diretor.nome_diretor FROM tb_sala, tb_sala_filme, tb_filme, tb_diretor
+WHERE tb_filme.codigo_diretor = 3
+AND tb_sala_filme.codigo_filme = tb_filme.codigo_filme
+AND tb_sala_filme.numero_sala = tb_sala.numero_sala
+AND tb_filme.codigo_diretor = tb_diretor.codigo_diretor;
+--
+-- Encontre todos os filmes premiados de Tim Burton 
+--
+SELECT tb_premio.nome_premio, tb_premio.ano_premiacao_premio, tb_filme.nome_filme, tb_diretor.nome_diretor FROM tb_premio, tb_filme, tb_diretor
+WHERE tb_filme.codigo_diretor = 4
+AND tb_premio.codigo_filme = tb_filme.codigo_filme
+AND tb_filme.codigo_diretor = tb_diretor.codigo_diretor;
+--
+-- Altere a categoria dos filmes com os código de 60 a 70 para a categoria “Realidade Virtual”
+--
+UPDATE tb_filme
+SET tb_filme.categoria_filme = "Realidade Virtual"
+WHERE tb_filme.codigo_filme >= 60
+AND tb_filme.codigo_filme <= 70;
+--
+-- Atualize todos os filmes com a categoria ação para categoria ação/aventura.
+--
+UPDATE tb_filme
+SET tb_filme.categoria_filme = "Ação/Aventura"
+WHERE tb_filme.categoria_filme = "A??o";
+-- Deixei a categoria assim, pois não estava reconhecendo o acento e o ç.

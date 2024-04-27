@@ -1,3 +1,4 @@
+-- Usando o Gerador de dados automático faça a geração de 100 registros por tabela exceto para as tabelas: tabela diretor que deve conter os seguintes registros (Pedro Paulo Matos, Jorge da Penha, Severino Juca, Tim Burton, Rob Zombie, Quentin Tarantino). Não esqueça de observar as relações existentes para que haja consistência na inserção de dados.
 --
 -- INSERTS DA TB_DIRETOR
 --
